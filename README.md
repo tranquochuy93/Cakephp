@@ -16,7 +16,7 @@
 | 0 (0 as an integer)	| bool(true)	| bool(true)	 
 | 0.0 (0 as a float)	| bool(true)	| bool(true)	 
 | var $var; (a variable declared, but without a value)	| bool(true)	| bool(true)
-| NULL | byte (“\ 0″)	 | bool(true)	 	 
+| NULL byte (“\ 0″)	 | bool(true)	 	 
  
  #### API
    - URL: must be separate by dashes. Example: /pick-items/registration.json => controller: PickItemsController.php
