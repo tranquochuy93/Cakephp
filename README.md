@@ -1,18 +1,22 @@
 ### convention
- #### isset vs empty
-   - isset()
-     - return TRUE if a variable has a value ,  
-       ```diff 
-       + including (False, 0 or empty string,  empty array())
-       - not NULL
-       ```
-     - FALSE otherwise
-   - empty()
-     - return TRUE if a variable has 
-       ```diff 
-       + empty value, empty string, 0, NULL or False, empty array()
-       ```
-     - FALSE otherwise
+ #### isset vs empty vs is_null
+ - isset: trả về true khi giá trị của biến KHÁC NULL
+ - empty: kiểm tra biến có bị rỗng hay không, trả về true nếu giá trị là: NULL, '0', '0', [], false, ''
+ - is_null: trả về true nếu giá trị của biến là NULL
+ 
+| Value of variable ($var)	| isset($var)	| empty($var)	| is_null($var) |
+|--------------|-------|--------------|--------------|
+| “” (an empty string) | 	bool(true) | 	bool(true)	| |
+| ” ” (space) |	bool(true) |	 	 
+| FALSE	| bool(true)	| bool(true)	 
+| TRUE	| bool(true)	 	 
+| array() | (an empty array)	| bool(true)	| bool(true)	 
+| NULL	|	bool(true)	| bool(true)
+| “0″ (0 as a string)	| bool(true) |	bool(true)	 
+| 0 (0 as an integer)	| bool(true)	| bool(true)	 
+| 0.0 (0 as a float)	| bool(true)	| bool(true)	 
+| var $var; (a variable declared, but without a value)	| bool(true)	| bool(true)
+| NULL | byte (“\ 0″)	 | bool(true)	 	 
  
  #### API
    - URL: must be separate by dashes. Example: /pick-items/registration.json => controller: PickItemsController.php
