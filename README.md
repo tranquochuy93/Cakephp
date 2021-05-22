@@ -44,3 +44,10 @@
           - đăng nhập bằng Facebook hay Gmail -> website sẽ dẫn bạn đến Facebook hay Gmail -> yêu cầu đăng nhập -> Facebook sẽ phát cho website một cái token Token này chứa một số quyền hạn nhất định giúp cho website có thể xác minh bạn là ai cũng như giúp cho website có thể hoạt động được
          
      - JWT
+
+### SSE(server side event) vs socket
+| SSE	| Socket |
+|--------------|-------|
+| a one-way communication between the Server to Browser. SSE connections can only push data to the browser. | 	a two-way communication between the Server and Browser, Websockets connections can both send data to the browser and receive data from the browser |
+|suffers from a limitation to the maximum number of open connections | |	 	 
+|Use EventSource API Javascript||
